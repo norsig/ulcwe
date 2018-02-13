@@ -1,6 +1,6 @@
 #!/bin/bash
 set -a
-repo="uncwe"
+repo="ulcw"
 s_a="/etc/nginx/sites-available"
 s_e="/etc/nginx/sites-enabled"
 drt="/var/www/html"
