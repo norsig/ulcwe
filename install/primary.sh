@@ -1,7 +1,7 @@
 #!/bin/bash
 
 downloadProject() {
-	export repo="ulcwe"
+	export repo="ulcw"
 	apt-get update -y
 	apt-get upgrade git -y
 	git clone https://github.com/benqzq/"$repo" --depth 1 --branch=master "$HOME"/"$repo"/
