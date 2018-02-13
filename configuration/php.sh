@@ -11,3 +11,4 @@ phpConf() {
 	done
 }
 phpConf
+"$rse"
