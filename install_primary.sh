@@ -14,7 +14,7 @@ utilizeProject() {
 	printf "%s\n" "source $HOME/$repo/configurations/variables.sh" >> $HOME/.bashrc
 	printf "%s\n" "source $HOME/$repo/configurations/aliases.sh" >> $HOME/.bashrc
 	source "$HOME"/.bashrc 2>/dev/null
-	bash "$HOME"/"$repo"/install/secondary.sh
+	bash "$HOME"/"$repo"/install/install_secondary.sh
 	"$rse"
 }
 utilizeProject
