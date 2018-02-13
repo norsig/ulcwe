@@ -1,0 +1,11 @@
+#!/bin/bash
+for dir in "$drt"/*/; do
+	if pushd "$dir"; then
+		wp plugin update --all --allow-root
+		wp core update --allow-root
+		wp language core update --allow-root
+		wp theme update --all --allow-root
+		popd
+	fi
+done
+"$rse"
