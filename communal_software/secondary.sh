@@ -1,5 +1,4 @@
 #!/bin/bash
-
 cd "$drt"
 rm -rf ${pma}* # Regex-Wildcard Combo (RWC): Don't double-quote variable expansions; 
 wget https://www.phpmyadmin.net/downloads/phpMyAdmin-latest-all-languages.zip
