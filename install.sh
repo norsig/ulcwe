@@ -1,5 +1,5 @@
 #!/bin/bash
-function localize() {
+localize() {
 	export repo="ulcwe"
 	apt-get update -y
 	apt-get upgrade git -y
@@ -11,7 +11,7 @@ function localize() {
 }
 localize
 
-function install() {
+install() {
 	"$HOME"/"$repo"/communal_software/primary.sh
 	"$HOME"/"$repo"/communal_software/secondary.sh
 
