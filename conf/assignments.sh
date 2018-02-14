@@ -12,5 +12,6 @@ alias drt="cd $drt/"
 alias rse="$HOME/$repo/personal_software/rse.sh"
 alias nxd="$HOME/$repo/personal_software/nxd.sh"
 alias imb="$HOME/$repo/personal_software/imb.sh"
-alias nws="$HOME/$repo/personal_software/nws.sh"
 alias tdm="tmux new-session -d 'bash $HOME/$repo/personal_software/tdm.sh'"
+
+alias nws="$HOME/$repo/personal_software/nws.sh"
