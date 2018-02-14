@@ -1,7 +1,6 @@
 #!/bin/bash
 alias drt="cd $drt/"
 alias rse="$rse"
-
 alias nxd="$HOME/$repo/internal_software/nxd.sh"
 alias imb="$HOME/$repo/internal_software/imb.sh"
 alias nwsm="$HOME/$repo/internal_software/nwsm.sh"
