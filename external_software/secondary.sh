@@ -2,11 +2,11 @@
 
 phpmyadmin() {
 	cd "$drt"
-	rm -rf "$pma"*
+	rm -rf ${pma}* # Regex-Wildcard Combo (RWC): No variable expansion quoting allowed; 
 	wget https://www.phpmyadmin.net/downloads/phpMyAdmin-latest-all-languages.zip
-	unzip "$pma"*.zip
-	mv "$pma"*/ phpmyadmin/
-	rm "$pma"*.zip
+	unzip ${pma}*.zip # RWC;
+	mv ${pma}*/ phpmyadmin/ # RWC;
+	rm ${pma}*.zip # RWC;
 	chmod -R 000 "$drt"/phpmyadmin/
 	cd
 }
@@ -17,3 +17,4 @@ wp-cli() {
 	chmod +x /usr/local/bin/wp
 }
 wp-cli
+a
