@@ -1,4 +1,6 @@
 #!/bin/bash
-"$rse"
-certbot --nginx -d "$domain" -d www."$domain"
-"$rse"
+"$PWD"/tests.sh
+"$PWD"/wp-cli.sh
+"$PWD"/nginx.sh
+"$PWD"/dbstack.sh
+"$PWD"/certbot.sh
