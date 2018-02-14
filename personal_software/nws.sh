@@ -2,8 +2,8 @@
 domain="$1" && test -z "$domain" && exit 2
 
 read -sp "DB user password:" dbrootp_1       && echo
-read -sp "DB user password again:" dbuserp_2 && echo
-read -sp "DB user password:" dbrootp_1       && echo
+read -sp "DB user password again:" dbrootp_2 && echo
+read -sp "DB user password:" dbuserp_1       && echo
 read -sp "DB user password again:" dbuserp_2 && echo
 
 if [ "$dbrootp_1" != "$dbrootp_2" ]; then echo "Values unmatched" && exit 1 fi
