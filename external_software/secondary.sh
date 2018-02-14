@@ -17,4 +17,3 @@ wp-cli() {
 	chmod +x /usr/local/bin/wp
 }
 wp-cli
-a
