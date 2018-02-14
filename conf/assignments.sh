@@ -1,5 +1,4 @@
 #!/bin/bash
-
 set -a
 repo="ulcwe"
 s_a="/etc/nginx/sites-available"
