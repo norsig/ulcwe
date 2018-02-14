@@ -14,7 +14,7 @@ source "$HOME"/.bashrc 2>/dev/null
 
 "$HOME"/"$repo"/conf/nginx_default.sh
 "$HOME"/"$repo"/conf/php.sh
-mv "$HOME"/"$repo"/conf/cron_daily /etc/cron.daily/cron_daily}
-mv "$HOME"/"$repo"/conf/cron_weekly /etc/cron.daily/cron_weekly}
+mv "$HOME"/"$repo"/conf/cron_daily /etc/cron.daily/cron_daily
+mv "$HOME"/"$repo"/conf/cron_weekly /etc/cron.daily/cron_weekly
 
 "$rse"
