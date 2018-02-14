@@ -7,8 +7,7 @@ git clone https://github.com/benqzq/"$repo" --depth 1 --branch=master "$HOME"/"$
 rm -rf "$HOME"/"$repo"/.git/
 chmod +x "$HOME"/"$repo"/* -R
 
-printf "%s\n" "source $HOME/$repo/configurations/variables.sh" >> $HOME/.bashrc
-echo "source $HOME/$repo/configurations/aliases.sh" >> $HOME/.bashrc
+printf "%s\n" "source $HOME/$repo/conf/assignments.sh" >> $HOME/.bashrc
 source "$HOME"/.bashrc 2>/dev/null
 
 "$HOME"/"$repo"/external_software/basics.sh
