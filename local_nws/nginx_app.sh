@@ -1,5 +1,4 @@
 #!/bin/bash
-
 cat <<-EOF > "$s_a/$domain.conf"
 server {
 	root ${drt}/${domain}/;
