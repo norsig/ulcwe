@@ -12,14 +12,21 @@ if [ "$dbuserp_1" != "$dbuserp_2" ]; then echo "Values unmatched" && exit 1 fi
 wp core download --path="$drt"/"$domain"/ --allow-root
 wp config create --path="$drt"/"$domain"/ --dbname="$domain" --dbuser="$domain" --dbpass="$dbuserp" --dbhost="localhost" --allow-root
 
-sed "s/\$domain/$1/g" "$HOME/$repo/conf/nginx_app" > "$s_a/$domain.conf"
+cat <<-EOF > "$s_a/$domain.conf"
+server {
+	root ${drt}/${domain}/;
+	server_name ${domain} www.${domain};
+	location ~* \.(jpg|jpeg|png|gif|ico|css|js|ttf|woff|pdf)$ {expires 365d;}
+	location "/wp-login\.php" {access_log "/var/log/httpd/wordpress-logins.log";}
+}
+EOF
 ln -sf "$s_a"/"$domain".conf "$s_e"
 
-cat <<-DBSTACK | mysql -u root -p"$dbrootp"
+cat <<-EOF | mysql -u root -p"$dbrootp"
 	CREATE USER "$domain"@"localhost" IDENTIFIED BY "$dbuserp";
 	CREATE DATABASE "$domain";
 	GRANT ALL PRIVILEGES ON "$domain".* TO "$domain"@"localhost";
-DBSTACK
+EOF
 
 "$rse"
 certbot --nginx -d "$domain" -d www."$domain"
