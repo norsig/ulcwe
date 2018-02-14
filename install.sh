@@ -12,7 +12,7 @@ echo "source $HOME/$repo/configurations/aliases.sh" >> $HOME/.bashrc
 source "$HOME"/.bashrc 2>/dev/null
 
 "$HOME"/"$repo"/external_software/{basics.sh,pma.sh,wp-cli.sh}
-"$HOME"/"$repo"/conf/{nginx.sh,php.sh}
+"$HOME"/"$repo"/conf/{nginx_default.sh,php.sh}
 mv "$HOME"/"$repo"/conf/cron_daily /etc/cron.daily/cron_daily}
 mv "$HOME"/"$repo"/conf/cron_weekly /etc/cron.daily/cron_weekly}
 
