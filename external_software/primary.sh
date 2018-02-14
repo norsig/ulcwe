@@ -1,5 +1,10 @@
 #!/bin/bash
 
+ufw() {
+	ufw --force enable
+	ufw allow 22,25,80,443,9000/tcp
+}
+
 apt() {
 	apt-get upgrade unattended-upgrades sshguard -y
 
