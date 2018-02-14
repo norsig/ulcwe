@@ -1,18 +1,4 @@
 #!/bin/bash
-domain="$1" && test -z "$domain" && exit 2
-
-read -sp "Please enter your database user password:" dbrootp_1       && echo
-read -sp "Please enter your database user password again:" dbrootp_2 && echo
-
-if [ "$dbrootp_1" != "$dbrootp_2" ]; then echo "The values don't match. Try again" && exit 1 fi
-
-read -sp "Please enter your DB user password:" dbuserp_1       && echo
-read -sp "Please enter your DB user password again:" dbuserp_2 && echo
-
-if [ "$dbuserp_1" != "$dbuserp_2" ]; then echo "The values don't match. Try again" && exit 1 fi
-
-wp core download --path="$drt"/"$domain"/ --allow-root
-wp config create --path="$drt"/"$domain"/ --dbname="$domain" --dbuser="$domain" --dbpass="$dbuserp" --dbhost="localhost" --allow-root
 
 cat <<-EOF > "$s_a/$domain.conf"
 server {
