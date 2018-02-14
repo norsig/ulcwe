@@ -9,8 +9,8 @@ chmod +x "$HOME"/"$repo"/* -R
 printf "%s\n" "source $HOME/$repo/conf/assignments.sh" >> $HOME/.bashrc
 source "$HOME"/.bashrc 2>/dev/null
 
-"$HOME"/"$repo"/external_software/primary.sh
-"$HOME"/"$repo"/external_software/secondary.sh
+"$HOME"/"$repo"/communal_software/primary.sh
+"$HOME"/"$repo"/communal_software/secondary.sh
 
 "$HOME"/"$repo"/conf/nginx_default.sh
 "$HOME"/"$repo"/conf/php.sh
