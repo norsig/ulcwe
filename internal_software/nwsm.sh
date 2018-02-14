@@ -6,7 +6,7 @@ read -sp "DB user password:" dbuserp
 wp core download --path="$drt"/"$domain"/ --allow-root
 wp config create --path="$drt"/"$domain"/ --dbname="$domain" --dbuser="$domain" --dbpass="$dbuserp" --dbhost="localhost" --allow-root
 
-sed "s/\$domain/$1/g" "$HOME/$repo/templates/nginx_app" > "$s_a/$domain.conf"
+sed "s/\$domain/$1/g" "$HOME/$repo/conf/nginx_app" > "$s_a/$domain.conf"
 ln -sf "$s_a"/"$domain".conf "$s_e"
 
 cat <<-DBSTACK | mysql -u root -p"$dbrootp"
