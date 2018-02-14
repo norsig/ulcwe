@@ -1,5 +1,4 @@
 #!/bin/bash
-
 function localize() {
 	export repo="ulcwe"
 	apt-get update -y
