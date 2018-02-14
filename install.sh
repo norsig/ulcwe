@@ -11,8 +11,13 @@ printf "%s\n" "source $HOME/$repo/configurations/variables.sh" >> $HOME/.bashrc
 echo "source $HOME/$repo/configurations/aliases.sh" >> $HOME/.bashrc
 source "$HOME"/.bashrc 2>/dev/null
 
-"$HOME"/"$repo"/external_software/{basics.sh,pma.sh,wp-cli.sh}
-"$HOME"/"$repo"/conf/{nginx_default.sh,php.sh}
+"$HOME"/"$repo"/external_software/basics.sh
+"$HOME"/"$repo"/external_software/pma.sh
+"$HOME"/"$repo"/external_software/wp-cli.sh
+
+"$HOME"/"$repo"/conf/nginx_default.sh
+"$HOME"/"$repo"/conf/php.sh
+
 mv "$HOME"/"$repo"/conf/cron_daily /etc/cron.daily/cron_daily}
 mv "$HOME"/"$repo"/conf/cron_weekly /etc/cron.daily/cron_weekly}
 
