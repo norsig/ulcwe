@@ -1,15 +1,15 @@
 #!/bin/bash
 
-envars_tertiary() {
+secondaryNonNativeEnvars() {
 	set -a
-	s_a="/etc/nginx/sites-available"
-	s_e="/etc/nginx/sites-enabled"
-	drt="/var/www/html"
-	pma="[pP][hH][pP][mM][yY][aA][dD][mM][iI][nN]"
-	rse="misc/rse.sh"
+		s_a="/etc/nginx/sites-available"
+		s_e="/etc/nginx/sites-enabled"
+		drt="/var/www/html"
+		pma="[pP][hH][pP][mM][yY][aA][dD][mM][iI][nN]"
+		rse="misc/rse.sh"
 	set +a
 }
-envars_tertiary
+secondaryNonNativeEnvars
 
 aliases() {
 	alias drt="cd $drt/"
