@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# The following functions are called with an alias, hence has no call;
-
 drt() {
 	cd $drt/
 }
