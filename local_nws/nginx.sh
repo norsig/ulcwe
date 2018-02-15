@@ -7,6 +7,5 @@ cat <<-EOF > "$s_a/$domain.conf"
 		location "/wp-login\.php" {access_log "/var/log/httpd/wordpress-logins.log";}
 	}
 EOF
-
 ln -sf "$s_a"/"$domain".conf "$s_e"
 "$rse"
