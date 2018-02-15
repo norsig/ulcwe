@@ -13,15 +13,12 @@ localize() {
 localize
 
 install() {
-	communal_software/primary.sh
-	communal_software/secondary.sh
-
+	comm/primary.sh
+	comm/secondary.sh
 	conf/nginx_default.sh
 	conf/php.sh
-
 	mv conf/cron_daily /etc/cron.daily/cron_daily
 	mv conf/cron_weekly /etc/cron.daily/cron_weekly
-
 	"$rse"
 }
 install
