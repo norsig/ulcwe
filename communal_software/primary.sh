@@ -1,7 +1,6 @@
 #!/bin/bash
 ufw --force enable
 ufw allow 22,25,80,443,9000/tcp
-
 apt-get upgrade unattended-upgrades sshguard -y
 
 apt-get upgrade nginx mysql-server php-fpm php-mysql -y
