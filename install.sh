@@ -1,15 +1,16 @@
 #!/bin/bash
 
-primaryNonNativeEnvars() {
-	cat <<-EOF >> "$HOME"/.bashrc
+cat <<-EOF >> "$HOME"/.bashrc
+	user="benqzq"
+	repo="ulcwe"
+	s_a="/etc/nginx/sites-available"
+	s_e="/etc/nginx/sites-enabled"
+	drt="/var/www/html"
+	rse="misc/rse.sh"
 
-		export user="benqzq"
-		export repo="ulcwe"
-		source $path/conf/assignments.sh
-	EOF
-	source "$HOME"/.bashrc 2>/dev/null
-}
-primaryNonNativeEnvars
+	alias nwsm="$HOME/$repo//nwsm/nwsm.sh"
+EOF	
+source "$HOME"/.bashrc 2>/dev/null
 
 localize() {
 	apt-get update -y
@@ -21,8 +22,8 @@ localize() {
 localize
 
 install() {
-	comm/primary.sh
-	comm/secondary.sh
+	bash/primary.sh
+	bash/secondary.sh
 	conf/nginx_default.sh
 	conf/php.sh
 	mv conf/cron_daily /etc/cron.daily/cron_daily
