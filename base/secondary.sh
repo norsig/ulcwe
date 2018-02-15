@@ -2,6 +2,10 @@
 
 # The following functions are called with an alias, hence has no call;
 
+drt() {
+	cd $drt/
+}
+
 nxd() {
     printf "\n\n General: \n\n" && nginx -t
     printf "\n\n Access: \n\n"  && tail /var/log/nginx/access.log
