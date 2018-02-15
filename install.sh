@@ -1,15 +1,22 @@
 #!/bin/bash
 
+primaryNonNativeEnvars() {
+	cat <<-EOF >> "$HOME"/.bashrc
+
+		export user="benqzq"
+		export repo="ulcwe"
+		source $path/conf/assignments.sh
+	EOF
+	source "$HOME"/.bashrc 2>/dev/null
+}
+primaryNonNativeEnvars
+
 localize() {
-	export repo="ulcwe"
-	export user="benqzq"
 	apt-get update -y
 	apt-get upgrade git -y
 	git clone https://github.com/"$user"/"$repo" --depth 1 --branch=master "$HOME"/"$repo"/
 	rm -rf "$HOME"/"$repo"/.git/
 	chmod +x "$HOME"/"$repo"/* -R
-	printf "%s\n" "source $HOME/$repo/conf/assignments.sh" >> $HOME/.bashrc
-	source "$HOME"/.bashrc 2>/dev/null
 }
 localize
 
