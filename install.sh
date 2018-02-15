@@ -1,5 +1,4 @@
 #!/bin/bash
-
 cat <<-EOF >> "$HOME"/.bashrc
 	user="benqzq"
 	repo="ulcwe"
