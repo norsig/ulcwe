@@ -9,7 +9,6 @@ security
 
 lemp() {
 	apt-get upgrade nginx mysql-server php-fpm php-mysql -y
-	apt-get upgrade php-mbstring php-mcrypt phpmyadmin -y
 }
 lemp
 
@@ -27,6 +26,7 @@ misc() {
 misc
 
 phpmyadmin() {
+	apt-get upgrade php-mbstring php-mcrypt phpmyadmin -y
 	ln -s /usr/share "$drt"
 	chmod -R 000 /usr/share/phpmyadmin/
 }
