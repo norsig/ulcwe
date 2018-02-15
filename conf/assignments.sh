@@ -1,6 +1,6 @@
 #!/bin/bash
 
-nonenvar_variables() {
+envar_tertiary() {
 	set -a
 		s_a="/etc/nginx/sites-available"
 		s_e="/etc/nginx/sites-enabled"
@@ -9,7 +9,7 @@ nonenvar_variables() {
 		rse="misc/rse.sh"
 	set +a
 }
-nonenvar_variables
+envar_tertiary
 
 aliases() {
 	alias drt="cd $drt/"
