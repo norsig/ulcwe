@@ -9,7 +9,7 @@ security
 
 lemp() {
 	apt-get upgrade nginx mysql-server php-fpm php-mysql -y
-	apt-get upgrade php-mbstring php-mcrypt -y
+	apt-get upgrade php-mbstring php-mcrypt phpmyadmin -y
 }
 lemp
 
@@ -25,3 +25,15 @@ misc() {
 	DEBIAN_FRONTEND=noninteractive apt-get upgrade postfix -y
 }
 misc
+
+phpmyadmin() {
+	ln -s /usr/share "$drt"
+	chmod -R 000 /usr/share/phpmyadmin/
+}
+phpmyadmin
+
+wp-cli() {
+	curl https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar > /usr/local/bin/wp
+	chmod +x /usr/local/bin/wp
+}
+wp-cli
