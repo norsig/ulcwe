@@ -21,7 +21,7 @@ localize() {
 localize
 
 install() {
-	bash/secondary.sh
+	base/secondary.sh
 	conf/cron.sh
 	conf/nginx_default.sh
 	conf/php.sh
