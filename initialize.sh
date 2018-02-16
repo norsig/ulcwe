@@ -3,8 +3,6 @@
 preface() {
 	cat <<-EOF >> "$HOME"/.bashrc
 
-		user="benqzq"
-		repo="ulcwe"
 		s_a="/etc/nginx/sites-available"
 		s_e="/etc/nginx/sites-enabled"
 		drt="/var/www/html"
@@ -17,7 +15,7 @@ preface
 localize() {
 	apt-get update -y
 	apt-get upgrade git -y
-	git clone https://github.com/"$user"/"$repo" --depth 1 --branch=master "$HOME"/"$repo"/
+	git clone https://github.com/benqzq/ulcwe --depth 1 --branch=master "$HOME"/"$repo"/
 	rm -rf "$HOME"/"$repo"/.git/
 	chmod +x "$HOME"/"$repo"/* -R
 }
