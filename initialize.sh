@@ -1,15 +1,19 @@
 #!/bin/bash
-cat <<-EOF >> "$HOME"/.bashrc
 
-	user="benqzq"
-	repo="ulcwe"
-	s_a="/etc/nginx/sites-available"
-	s_e="/etc/nginx/sites-enabled"
-	drt="/var/www/html"
-	source "$HOME"/$repo/bash/primary.sh
-	alias nwsm="$HOME/$repo/nwsm/nwsm.sh"
-EOF
-source "$HOME"/.bashrc 2>/dev/null
+preface() {
+	cat <<-EOF >> "$HOME"/.bashrc
+
+		user="benqzq"
+		repo="ulcwe"
+		s_a="/etc/nginx/sites-available"
+		s_e="/etc/nginx/sites-enabled"
+		drt="/var/www/html"
+		source "$HOME"/$repo/bash/primary.sh
+		alias nwsm="$HOME/$repo/nwsm/nwsm.sh"
+	EOF
+	source "$HOME"/.bashrc 2>/dev/null
+}
+preface
 
 localize() {
 	apt-get update -y
