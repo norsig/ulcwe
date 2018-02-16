@@ -1,6 +1,0 @@
-#!/bin/bash
-cat <<-EOF | mysql -u root -p"$dbrootp"
-	CREATE USER "$domain"@"localhost" IDENTIFIED BY "$dbuserp";
-	CREATE DATABASE "$domain";
-	GRANT ALL PRIVILEGES ON "$domain".* TO "$domain"@"localhost";
-EOF
