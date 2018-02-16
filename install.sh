@@ -24,8 +24,8 @@ localize() {
 localize
 
 install() {
-	install_externals.sh
-	install_internals.sh
+	software_external.sh
+	software_internal.sh
 	conf/lemp.sh
 	conf/cron.sh
 	"$rse"
