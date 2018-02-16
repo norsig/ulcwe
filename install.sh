@@ -5,12 +5,10 @@ cat <<-EOF >> "$HOME"/.bashrc
 	s_a="/etc/nginx/sites-available"
 	s_e="/etc/nginx/sites-enabled"
 	drt="/var/www/html"
-	rse="misc/rse.sh"
-	
-	source "$HOME"/$repo/bash/secondary.sh
-	
-	alias nwsm="$HOME/$repo/nwsm/nwsm.sh"
 
+	alias nwsm="$HOME/$repo/nwsm/nwsm.sh"
+	
+	source "$HOME"/$repo/bash/primary.sh
 EOF	
 source "$HOME"/.bashrc 2>/dev/null
 
@@ -24,12 +22,10 @@ localize() {
 localize
 
 install() {
-	bash/primary.sh
 	bash/secondary.sh
+	conf/cron.sh
 	conf/nginx_default.sh
 	conf/php.sh
-	mv conf/cron_daily /etc/cron.daily/cron_daily
-	mv conf/cron_weekly /etc/cron.daily/cron_weekly
 	"$rse"
 }
 install
