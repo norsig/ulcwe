@@ -30,3 +30,4 @@ rse() {
 	systemctl restart nginx.service
 	/etc/init.d/php*-fpm restart
 }
+
