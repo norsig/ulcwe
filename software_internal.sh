@@ -5,9 +5,9 @@ drt() {
 }
 
 nxd() {
-    printf "\n\n General: \n\n" && nginx -t                       && echo
-    printf "\n\n Access: \n\n"  && tail /var/log/nginx/access.log && echo
-    printf "\n\n Errors: \n\n"  && tail /var/log/nginx/error.log  && echo
+	printf "\n\n General: \n\n" && nginx -t                       && echo
+	printf "\n\n Access: \n\n"  && tail /var/log/nginx/access.log && echo
+	printf "\n\n Errors: \n\n"  && tail /var/log/nginx/error.log  && echo
 }
 
 imb() {
@@ -30,4 +30,3 @@ rse() {
 	systemctl restart nginx.service
 	/etc/init.d/php*-fpm restart
 }
-
