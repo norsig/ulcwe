@@ -1,5 +1,6 @@
 #!/bin/bash
 cat <<-EOF >> "$HOME"/.bashrc
+
 	user="benqzq"
 	repo="ulcwe"
 	s_a="/etc/nginx/sites-available"
@@ -8,7 +9,8 @@ cat <<-EOF >> "$HOME"/.bashrc
 
 	source "$HOME"/$repo/bash/primary.sh
 	alias nwsm="$HOME/$repo/nwsm/nwsm.sh"
-EOF	
+EOF
+
 source "$HOME"/.bashrc 2>/dev/null
 
 localize() {
