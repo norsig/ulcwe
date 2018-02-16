@@ -21,10 +21,10 @@ localize() {
 localize
 
 install() {
-	base/secondary.sh
+	install_externals.sh
+	install_internals.sh
+	conf/lemp.sh
 	conf/cron.sh
-	conf/nginx_default.sh
-	conf/php.sh
 	"$rse"
 }
 install
