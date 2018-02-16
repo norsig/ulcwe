@@ -2,7 +2,7 @@
 export user="benqzq"
 export repo="ulcwe"
 
-preface() {	
+preparations() {	
 	cat <<-EOF >> "$HOME"/.bashrc
 
 		s_a="/etc/nginx/sites-available"
@@ -12,7 +12,7 @@ preface() {
 	EOF
 	source "$HOME"/.bashrc 2>/dev/null
 }
-preface
+preparations
 
 localize() {
 	apt-get update -y
