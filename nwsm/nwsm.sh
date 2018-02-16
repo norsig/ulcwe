@@ -10,6 +10,6 @@ read -sp "Please enter DB user password again:" dbuserp_2 \
 if [ "$dbuserp_1" != "$dbuserp_2" ]; then echo "Values unmatched. Please try again." && exit 1 fi
 
 "$PWD"/wp-cli.sh
-"$PWD"/nginx.sh
+"$PWD"/nginx_app.sh
 "$PWD"/dbstack.sh
 "$PWD"/certbot.sh
