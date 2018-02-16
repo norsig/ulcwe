@@ -1,3 +1,0 @@
-#!/bin/bash
-find "${drt}" -path "*/cache/*" -type f -delete
-certbot renew -q
