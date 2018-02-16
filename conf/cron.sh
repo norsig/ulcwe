@@ -1,5 +1,4 @@
 #!/bin/bash
-
 cat <<-EOF > /etc/cron.daily/cron_daily
 	#!/bin/bash
 	for dir in "$drt"/*/; do
