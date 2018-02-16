@@ -1,9 +1,8 @@
 #!/bin/bash
+export user="benqzq"
+export repo="ulcwe"
 
-preface() {
-	export user="benqzq"
-	export repo="ulcwe"
-	
+preface() {	
 	cat <<-EOF >> "$HOME"/.bashrc
 
 		s_a="/etc/nginx/sites-available"
@@ -11,7 +10,6 @@ preface() {
 		drt="/var/www/html"
 		source "$HOME"/$repo/bash/primary.sh
 	EOF
-	
 	source "$HOME"/.bashrc 2>/dev/null
 }
 preface
