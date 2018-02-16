@@ -24,10 +24,10 @@ localize() {
 localize
 
 install() {
-	software_external.sh
-	software_internal.sh
-	conf/lemp.sh
-	conf/cron.sh
+	"$HOME"/$repo/software_external.sh
+	"$HOME"/$repo/software_internal.sh
+	"$HOME"/$repo/conf/lemp.sh
+	"$HOME"/$repo/conf/cron.sh
 	"$rse"
 }
 install
