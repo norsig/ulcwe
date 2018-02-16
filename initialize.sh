@@ -9,7 +9,6 @@ preface() {
 		s_e="/etc/nginx/sites-enabled"
 		drt="/var/www/html"
 		source "$HOME"/$repo/bash/primary.sh
-		alias nwsm="$HOME/$repo/nwsm/nwsm.sh"
 	EOF
 	source "$HOME"/.bashrc 2>/dev/null
 }
