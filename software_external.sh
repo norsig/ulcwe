@@ -28,7 +28,7 @@ misc
 
 phpmyadmin() {
 	apt-get upgrade php-mbstring php-mcrypt phpmyadmin -y
-	ln -s /usr/share "$drt"
+	ln -s /usr/share/phpmyadmin/ "$drt"
 	chmod -R 000 /usr/share/phpmyadmin/
 }
 phpmyadmin
