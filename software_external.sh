@@ -9,6 +9,7 @@ security
 
 lemp() {
 	apt-get upgrade nginx mysql-server php-fpm php-mysql -y
+	apt-get upgrade php-curl php-gd -y
 }
 lemp
 
