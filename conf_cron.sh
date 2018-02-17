@@ -7,7 +7,7 @@ cat <<-EOF > /etc/cron.daily/cron_daily
 			wp core update --allow-root
 			wp language core update --allow-root
 			wp theme update --all --allow-root
-			"$rse"
+			rse
 		popd
 		fi
 	done
