@@ -23,10 +23,10 @@ localize() {
 }
 localize
 
-install() {
+execute() {
 	"$HOME"/$repo/software_external.sh # software_internal already installed.
 	"$HOME"/$repo/conf/lemp.sh
 	"$HOME"/$repo/conf/cron.sh
 	"$rse"
 }
-install
+execute
