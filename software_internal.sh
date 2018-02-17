@@ -1,13 +1,14 @@
 #!/bin/bash
 
-drt() {
-	cd $drt/
+rse() {
+	chown -R www-data:www-data "$drt"/
+	chmod -R a-x,a=rX,u+w "$drt"/
+	systemctl restart nginx.service
+	/etc/init.d/php*-fpm restart
 }
 
-nxd() {
-	printf "\n\n General: \n\n" && nginx -t                       && echo
-	printf "\n\n Access: \n\n"  && tail /var/log/nginx/access.log && echo
-	printf "\n\n Errors: \n\n"  && tail /var/log/nginx/error.log  && echo
+drt() {
+	cd $drt/
 }
 
 imb() {
@@ -24,9 +25,8 @@ tdm() {
 	tmux kill-session
 }
 
-rse() {
-	chown -R www-data:www-data "$drt"/
-	chmod -R a-x,a=rX,u+w "$drt"/
-	systemctl restart nginx.service
-	/etc/init.d/php*-fpm restart
+nxd() {
+	printf "\n\n General: \n\n" && nginx -t                       && echo
+	printf "\n\n Access: \n\n"  && tail /var/log/nginx/access.log && echo
+	printf "\n\n Errors: \n\n"  && tail /var/log/nginx/error.log  && echo
 }
