@@ -24,4 +24,3 @@ cat <<-EOF > "$dir"/zz_overrides.ini
 	cgi.fix_pathinfo=0
 EOF
 done
-"$rse"
