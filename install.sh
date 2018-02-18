@@ -5,9 +5,9 @@ export repo="ulcwe"
 preparations() {	
 	cat <<-EOF >> "$HOME"/.bashrc
 
-		s_a="/etc/nginx/sites-available"
-		s_e="/etc/nginx/sites-enabled"
-		drt="/var/www/html"
+		export s_a="/etc/nginx/sites-available"
+		export s_e="/etc/nginx/sites-enabled"
+		export drt="/var/www/html"
 		source "$HOME"/$repo/software_internal.sh
 	EOF
 	source "$HOME"/.bashrc 2>/dev/null
