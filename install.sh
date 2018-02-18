@@ -2,13 +2,13 @@
 export user="benqzq"
 export repo="ulcwe"
 
-preparations() {	
+preparations() {
 	cat <<-EOF >> "$HOME"/.bashrc
 
 		export s_a="/etc/nginx/sites-available"
 		export s_e="/etc/nginx/sites-enabled"
 		export drt="/var/www/html"
-		source "$HOME"/$repo/software_internal.sh
+		source "$HOME"/"$repo"/software_internal.sh
 	EOF
 	source "$HOME"/.bashrc 2>/dev/null
 }
