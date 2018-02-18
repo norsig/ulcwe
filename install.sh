@@ -24,9 +24,9 @@ localize() {
 localize
 
 execute() {
-	"$HOME"/$repo/software_external.sh # software_internal already installed.
-	"$HOME"/$repo/conf/lemp.sh
-	"$HOME"/$repo/conf/cron.sh
+	"$HOME"/$repo/software_external.sh
+	"$HOME"/$repo/conf_lemp.sh
+	"$HOME"/$repo/conf_cron.sh
 	rse
 }
 execute
