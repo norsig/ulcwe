@@ -2,7 +2,7 @@
 export user="benqzq"
 export repo="ulcwe"
 
-function preparations() {
+preparations() {
 	cat <<-EOF >> "$HOME"/.bashrc
 
 		export s_a="/etc/nginx/sites-available"
