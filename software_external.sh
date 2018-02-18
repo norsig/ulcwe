@@ -27,9 +27,15 @@ misc() {
 misc
 
 phpmyadmin() {
-	apt-get upgrade php-mbstring php-mcrypt phpmyadmin -y
-	ln -s /usr/share/phpmyadmin/ "$drt"
-	chmod -R 000 /usr/share/phpmyadmin/
+        pma="[pP][hH][pP][mM][yY][aA][dD][mM][iI][nN]"
+	cd "$drt"
+	rm -rf ${pma}* # Regex-Wildcard Combo (RWC): variable expansions aren't quoted; 
+	wget https://www.phpmyadmin.net/downloads/phpMyAdmin-latest-all-languages.zip
+	unzip ${pma}*.zip # RWC;
+	mv ${pma}*/ phpmyadmin/ # RWC;
+	rm ${pma}*.zip # RWC;
+	chmod -R 000 "$drt"/phpmyadmin/
+	cd
 }
 phpmyadmin
 
